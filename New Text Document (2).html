@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Developer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(45deg, #0078d7, #005bb5);
+            color: #fff;
+            padding: 50px 10px;
+            text-align: center;
+            animation: fadeInDown 1s ease;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            animation: fadeIn 1.5s ease;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-top: 20px;
+            animation: fadeIn 2s ease;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideInDown 1s ease;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #0078d7;
+        }
+        section {
+            padding: 50px;
+            max-width: 1000px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        section h2 {
+            color: #0078d7;
+            margin-bottom: 15px;
+            animation: fadeInUp 1s ease;
+        }
+        section p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        .contact-info p {
+            margin: 10px 0;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #0078d7;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 10px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #005bb5;
+            transform: scale(1.1);
+        }
+        #scrollToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #0078d7;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        #scrollToTop:hover {
+            background-color: #005bb5;
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideInDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Making Full Functional Website Customizable For Your Business</h1>
+        <p>Freelance Developer: AbdElrhman Muhamed</p>
+        <img src="https://media.licdn.com/dms/image/v2/D4E03AQH5l7q3Fw8C3w/profile-displayphoto-shrink_400_400/B4EZRT0LpuHsAg-/0/1736572977268?e=1743033600&v=beta&t=4yQHi0srpkQT8ji6cFsio1Mq1e9DqTY_D1BolNq5z1I" alt="Photo">
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">My Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact Info</a>
+    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Full-Stack Developer passionate about creative development and eager to learn. I like to take on challenges, share with others, and see the end result of a project that satisfies both the client and myself.</p>
+        <a class="btn" href="#contact">Let's Join Us</a>
+    </section>
+    <section id="services">
+        <h2>My Services</h2>
+        <p>Professional services tailored to meet your business needs, including:</p>
+        <ul style="text-align: left; margin: 20px auto; max-width: 800px;">
+            <li>Custom Website Development To Your Business</li>
+            <li>Software Solutions To Your Business Website</li>
+            <li>Responsive Designs and Easy To Use </li>
+            <li>Integration With All Services Including But Not Limited toL:-
+            <ol>
+                <li>Google (Maps-Analytics-authinticatin)</li>
+                <li>youtube (videos From Your Chanal)</li>
+                <iframe width="250" height="250" src="https://www.youtube.com/embed/QmlNAE-Hsmw?si=qcWN3QDL8UPUr8KL"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <li>Facebook (Authintication)</li>
+                <li>SEO Optimization</li>
+            </ol>    
+            </li>
+        </ul>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Take a look at some of my previous work:</p>
+        <ul style="text-align: left; margin: 20px auto; max-width: 800px;">
+            <li><a href="https://www.wix.com/website-template/view/html/3793?originUrl=https%3A%2F%2Fwww.wix.com%2Fwebsite%2Ftemplates%3Fpsafe_param%3D1%26utm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D21365768101%5E163727023856%5Esearch%2520-%2520dsa%26experiment_id%3D%5E%5E701718889616%5E%26gad_source%3D1%26gclid%3DCj0KCQiA4rK8BhD7ARIsAFe5LXK7GKAZulw0iK9ta5ZdfKVCx-3j3W_eyEnIIQCcpLkFfoxmG7rkfwAaAkUPEALw_wcB&tpClick=view_button&esi=ba0ff2ea-ff33-4cee-a419-833b86eaae7d" target="_blank">Project 1: E-commerce Platform</a></li>
+            <img src="https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/120b7a83848f3f16a10e40459d8761ef3b1c5fbc2b3fe5dddab41932912a25341733214345506.jpg/v1/fill/w_322%2Ch_182%2Cq_90%2Cusm_0.60_1.00_0.01/120b7a83848f3f16a10e40459d8761ef3b1c5fbc2b3fe5dddab41932912a25341733214345506.jpg" alt="">
+            <li><a href="https://www.wix.com/website-template/view/html/1936?originUrl=https%3A%2F%2Fwww.wix.com%2Fwebsite%2Ftemplates&tpClick=view_button&esi=297761b1-ded2-41d3-b8d5-5b8bd54b172e" target="_blank">Project 2: Portfolio Website</a></li>
+            <img src="https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/dd4d72ee00b5434bac35d45bc50b315a.jpg/v1/fill/w_322%2Ch_182%2Cq_90%2Cusm_0.60_1.00_0.01/dd4d72ee00b5434bac35d45bc50b315a.jpg" alt="">
+            <li><a href="https://www.wix.com/website-template/view/html/2282?originUrl=https%3A%2F%2Fwww.wix.com%2Fwebsite%2Ftemplates&tpClick=view_button&esi=ccb7afb9-c3cd-445b-a268-09c6334c3c3e" target="_blank">Project 3: Business Management Tool</a></li>
+            <img src="https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/930c7858f25ab4b509c2c7642926e551ce31d5ab621f3d49e6251daed6cd8c511683021255495.jpg/v1/fill/w_322%2Ch_182%2Cq_90%2Cusm_0.60_1.00_0.01/930c7858f25ab4b509c2c7642926e551ce31d5ab621f3d49e6251daed6cd8c511683021255495.jpg" alt="">
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact Info</h2>
+        <div class="contact-info">
+            <p>Phone No: 01271175532</p>
+            <p>Email: Talktoboda01@Gmail.Com</p>
+            <p><a href="https://www.linkedin.com/in/apdo978" target="_blank">LinkedIn Profile</a></p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 AbdElrhman Muhamed. All Rights Reserved.</p>
+    </footer>
+    <button id="scrollToTop" title="Go to top">&#8679;</button>
+    <script>
+        // Smooth scrolling for nav links
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector(link.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add fade-in effect on scroll
+        const sections = document.querySelectorAll('section');
+        const options = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            section.style.opacity = 0;
+            section.style.transform = 'translateY(50px)';
+            observer.observe(section);
+        });
+
+        // Scroll to top button functionality
+        const scrollToTopButton = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > window.innerHeight / 2) {
+                scrollToTopButton.style.display = 'block';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        });
+
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+            document.querySelectorAll('img').forEach(img => {
+                    img.addEventListener('mouseenter', () => {
+                        img.style.transform = 'scale(1.05)';
+                        img.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+                    });
+                    img.addEventListener('mouseleave', () => {
+                        img.style.transform = 'scale(1)';
+                        img.style.boxShadow = 'none';
+                    });
+                });
+    </script>
+</body>
+</html>
