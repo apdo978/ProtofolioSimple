@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freelance Developer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             transition: all 0.3s ease;
+            text-transform: capitalize;
+          
         }
         body {
+             
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             background-color: #f4f4f9;
@@ -19,17 +24,32 @@
             margin: 0;
             overflow-x: hidden;
         }
+        h1 span {
+  display: inline-block;
+font-size: 2rem;
+}
+.tit1{
+  animation:  bounce 1.5s ease-in-out forwards, tilt 1s 1.5s forwards;
+
+}
+.tit2{
+    animation:  bounce2 1.5s ease-in-out forwards, tilt2 1s 1.5s forwards;
+}
+.tit3{
+    animation:  tilt3 2.5s 1.5s  ease-in-out forwards;
+}
         header {
             background: linear-gradient(45deg, #0078d7, #005bb5);
             color: #fff;
             padding: 50px 10px;
             text-align: center;
-            animation: fadeInDown 1s ease;
+            animation:  fadeInDown 1s ease;
         }
         header h1 {
             font-size: 3rem;
             margin-bottom: 10px;
             animation: fadeIn 1.5s ease;
+
         }
         header p {
             font-size: 1.2rem;
@@ -56,12 +76,17 @@
         nav a {
             color: #fff;
             text-decoration: none;
+            padding: 5px;
             margin: 0 20px;
             font-size: 1.1rem;
             transition: color 0.3s ease;
+            border: 2px solid #006ecb;
+            border-radius: 5px;
+            transition: 0.5s;
         }
         nav a:hover {
             color: #0078d7;
+            transform: scale(1.2);
         }
         section {
             padding: 50px;
@@ -70,11 +95,14 @@
             text-align: center;
         }
         section h2 {
+            text-transform: capitalize;
+            font-size:2em;
             color: #0078d7;
             margin-bottom: 15px;
-            animation: fadeInUp 1s ease;
+            animation:  fadeInUp 1s ease;
         }
         section p {
+            text-transform: capitalize;
             font-size: 1.1rem;
             margin-bottom: 15px;
         }
@@ -124,6 +152,69 @@
             background-color: #005bb5;
             transform: scale(1.1);
         }
+        .interactive-list {
+  list-style: none; 
+  padding: 0;
+}
+
+.interactive-list li {
+    cursor: default;
+  margin: 10px 0; 
+  padding: 15px; 
+  background: linear-gradient(90deg, #333, #2575fc);
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 8px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:  transform 0.3s, background 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.interactive-list li:hover {
+  transform: scale(1.05); 
+  background: linear-gradient(90deg, #2575fc, #333);
+}
+
+.interactive-list li span {
+  margin-right: 10px; 
+  font-size: 1.5rem;
+}
+  .login-buttons {
+      display: flex;
+      
+      gap: 15px;
+    }
+    .login-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .login-button i {
+      margin-right: 10px;
+      font-size: 18px;
+    }
+    .login-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .google {
+      background-color: #db4437;
+    }
+    .facebook {
+      background-color: #1877f2;
+    }
+    .apple {
+      background-color: #000;
+    }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -140,11 +231,80 @@
             from { transform: translateY(-100%); }
             to { transform: translateY(0); }
         }
+
+        @keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+ 
+  50% {
+    transform: translateY(-70px);
+  }
+  70% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+        @keyframes bounce2 {
+  0% {
+    transform: translateX(0);
+  }
+ 
+  50% {
+    transform: translateX(-70px);
+    transform: scale(1.5);
+    
+  }
+  70% {
+    transform: translateX(40px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Animation for tilting */
+@keyframes tilt {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+@keyframes tilt2 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+@keyframes tilt3 {
+  0% {
+    transform: rotate(0);
+    transform-origin: left;
+  }
+  50%{
+     transform: rotate(20deg);
+     transform-origin: left;
+
+  }
+  70%{ transform: rotate(40deg);
+     transform-origin: left;}
+  100% {
+    transform: rotate(10deg);
+     transform-origin: left;
+  }
+}
     </style>
 </head>
 <body>
     <header>
-        <h1>Making Full Functional Website Customizable For Your Business</h1>
+        <h1>Making <span class="tit1">Full Functional </span>Website <span class="tit2">Customizable</span> For Your <span class="tit3">Business</span></h1>
         <p>Freelance Developer: AbdElrhman Muhamed</p>
         <img src="https://media.licdn.com/dms/image/v2/D4E03AQH5l7q3Fw8C3w/profile-displayphoto-shrink_400_400/B4EZRT0LpuHsAg-/0/1736572977268?e=1743033600&v=beta&t=4yQHi0srpkQT8ji6cFsio1Mq1e9DqTY_D1BolNq5z1I" alt="Photo">
     </header>
@@ -156,25 +316,40 @@
     </nav>
     <section id="about">
         <h2>About Me</h2>
-        <p>Full-Stack Developer passionate about creative development and eager to learn. I like to take on challenges, share with others, and see the end result of a project that satisfies both the client and myself.</p>
-        <a class="btn" href="#contact">Let's Join Us</a>
+        <p>Full-Stack Web Developer passionate about creative development and eager to learn. I like to take on challenges, share with others, and see the end result of a project that satisfies both the client and myself.</p>
+        <a class="btn cta" style="cursor:pointer"  onclick=" document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });">Let's Join Us</a>
     </section>
     <section id="services">
         <h2>My Services</h2>
         <p>Professional services tailored to meet your business needs, including:</p>
-        <ul style="text-align: left; margin: 20px auto; max-width: 800px;">
-            <li>Custom Website Development To Your Business</li>
-            <li>Software Solutions To Your Business Website</li>
-            <li>Responsive Designs and Easy To Use </li>
-            <li>Integration With All Services Including But Not Limited toL:-
+        <ul class="interactive-list" style="text-align: left; margin: 20px auto; max-width: 800px;">
+        <li><span>✅</span> Custom Website Development To Your Business</li>
+        <li><span>💻</span> Software Solutions To Your Business Website</li>
+        <li><span>📱</span> Responsive Designs and Easy To Use</li>
+        <li><span>🔗</span> Integration With All Services Including But Not Limited to:</li>
             <ol>
-                <li>Google (Maps-Analytics-authinticatin)</li>
-                <li>youtube (videos From Your Chanal)</li>
-                <iframe width="250" height="250" src="https://www.youtube.com/embed/QmlNAE-Hsmw?si=qcWN3QDL8UPUr8KL"
+                <li>Google (Maps-Analytics-Authentication)</li>
+                <li>youtube (videos From Your Channel)</li>
+                <iframe width="250" height="315" src="https://www.youtube.com/embed/QmlNAE-Hsmw?si=qcWN3QDL8UPUr8KL"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <li>Facebook (Authintication)</li>
+                    <iframe width="250" height="315" src="https://www.youtube.com/embed/Z6nod8NR5A8?si=Uz3WsI_m_J3zQCZD"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <li>Facebook (Authentication)</li>
+                <div class="login-buttons">
+                    <button class="login-button google">
+                        <i class="fab fa-google"></i> Sign in with Google
+                    </button>
+                    <button class="login-button facebook">
+                        <i class="fab fa-facebook-f"></i> Sign in with Facebook
+                    </button>
+                    <button class="login-button apple">
+                        <i class="fab fa-apple"></i> Sign in with Apple
+                    </button>
+                </div>
                 <li>SEO Optimization</li>
             </ol>    
             </li>
@@ -205,13 +380,25 @@
     </footer>
     <button id="scrollToTop" title="Go to top">&#8679;</button>
     <script>
+            //  document.querySelector(".btn cta").addEventListener("click", function () {
+                   
+            //     });
         // Smooth scrolling for nav links
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
+           
                 document.querySelector(link.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+               document.querySelectorAll('nav a').forEach((link)=>{
+                link.style.backgroundColor = "transparent"
+                link.style.color = "white";
+            })
+                  link.style.backgroundColor = "white"
+                link.style.color = "black";
+
+                
             });
         });
 
@@ -249,6 +436,10 @@
 
         scrollToTopButton.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+                  document.querySelectorAll('nav a').forEach((link) => {
+                link.style.backgroundColor = "transparent"
+                link.style.color = "white";
+            })
         });
             document.querySelectorAll('img').forEach(img => {
                     img.addEventListener('mouseenter', () => {
