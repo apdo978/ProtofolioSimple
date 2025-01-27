@@ -20,11 +20,11 @@
         }
         body {
 
-      
-    /* background-attachment:fixed;
+      /* background-image: url('https://files.oaiusercontent.com/file-Hn3KqHrQL9xHn4SWkG8MHx?se=2025-01-26T18%3A13%3A47Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D86c8f3f4-c008-4050-9ffb-8c18021a509d.webp&sig=HjCCXiOUiriZ4YDJbdL5u2ZgkNzSD2tYjsOx/ne%2BmY0%3D');
+    background-attachment:fixed;
     background-repeat:no-repeat;
-    background-size:cover;
-    */
+    background-size:cover; */
+   
 
             font-family: 'Poppins', sans-serif;
             line-height: 1.8;
@@ -47,6 +47,17 @@ font-size: 2rem;
 .tit3{
     animation:  tilt3 2.5s 1.5s  ease-in-out forwards;
 }
+        /*images */
+        /* img {
+          
+          
+        } */
+        img:hover {
+          transform: scale(1.1);
+          box-shadow:  4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+/*full functional first header*/
         header {
             background: linear-gradient(45deg, #0078d7, #005bb5);
             color: #fff;
@@ -54,12 +65,15 @@ font-size: 2rem;
             text-align: center;
             animation:  fadeInDown 1s ease;
         }
+        /*big words ionside the header*/
         header h1 {
             font-size: 4vw;
             margin-bottom: 10px;
             animation: fadeIn 1.5s ease;
 
         }
+        /*s,all words inside the header*/
+        /*tmp email , mohmal   for emails*/
         header p {
             font-size: 1.2rem;
         }
@@ -71,6 +85,7 @@ font-size: 2rem;
             margin-top: 20px;
             animation: fadeIn 2s ease;
         }
+        /*navbar*/
         nav {
             background-color: #333;
             color: #fff;
@@ -82,6 +97,7 @@ font-size: 2rem;
             z-index: 1000;
             animation: slideInDown 1s ease;
         }
+        /*anchors inside the links*/
         nav a {
             text-align: center;
             color: #fff;
@@ -98,12 +114,14 @@ font-size: 2rem;
             color: #0078d7;
             transform: scale(1.2);
         }
+        /*all sections include about servcies and contact*/
         section {
             padding: 5vh 10vw;
             max-width: 100%;
             margin: 0 auto;
             text-align: center;
         }
+        /*about servcies contact words*/
         section h2 {
             text-transform: capitalize;
             font-size:2em;
@@ -111,6 +129,7 @@ font-size: 2rem;
             margin-bottom: 15px;
             animation:  fadeInUp 1s ease;
         }
+        /*youtube videos*/
         iframe {
     border: none;
              border-radius: 12px;
@@ -121,65 +140,14 @@ font-size: 2rem;
     transform: scale(1.1);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
   }
+  /*words inside sections descreptions*/
         section p {
             text-transform: capitalize;
             font-size: 1.1rem;
             margin-bottom: 15px;
+
         }
-        @media (max-width: 768px) {
-            body {
-  margin: 0;
-  overflow-x: hidden; 
-}
-  header h1 {
-    font-size: 5vw;
-  }
-
-  nav a {
-    font-size: 0.9rem;
-    margin: 0 5px;
-  }
-
-  section {
-    padding: 5vh 5vw;
-  }
-
-  .btn {
-    padding: 10px 20px;
-  }
-}
-
-@media (max-width: 480px) {
-    * {
-  box-sizing: border-box;
-}
-
-
-body {
-  margin: 0;
-  overflow-x: hidden; 
-}
-  header h1 {
-    font-size: 6vw;
-  }
-body{
-    width: 100%;
-}
-  nav {
-    position:relative;
-    flex-direction: column;
-  }
-
-  nav a {
-    margin: 5px 0;
-  }
-   .interactive-list div :nth-child(1){
-    display: flex;
-    flex-direction: column !important;
-    justify-content: center;
-
- }
-}
+  /*allrights reserved*/
         footer {
             background-color: #333;
             color: #fff;
@@ -230,7 +198,7 @@ body{
     }
 
     }
-
+/*when form activated*/
     .form-section input,
     .form-section textarea {
       padding: 10px;
@@ -289,15 +257,15 @@ body{
             background-color: #005bb5;
             transform: scale(1.1);
         } 
-        /*####*/
+        /*scroll to top button*/
         #scrollToTop {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background-color: #0078d7;
+            background-color: #333;
             color: #fff;
             border: none;
-            padding: 10px 15px;
+            padding: 1.5rem 2rem;
             border-radius: 50%;
             cursor: pointer;
             display: none;
@@ -338,7 +306,7 @@ body{
      cursor: pointer; 
 
 } */
-
+/*interactive list*/
 .interactive-list li {
     cursor: pointer;
   margin: 10px 0; 
@@ -353,26 +321,17 @@ body{
   transition:  transform 0.3s, background 0.3s;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
-
-
-.fa-whatsapp:hover{
-    cursor: pointer;
-  transform: scale(1.5); 
-
-}
-.fa-linkedin:hover{
-    cursor: pointer;
-  transform: scale(1.5); 
-}
+/*each list*/
 .interactive-list li:hover {
-  transform: scale(1.05); 
+  transform: scale(1.1)!important;
   background: linear-gradient(90deg, #2575fc, #333);
 }
-
+/*words inside lists*/
 .interactive-list li span {
   margin-right: 10px; 
   font-size: 1.5rem;
 }
+
 li div {
     background-color: #000;
 }
@@ -410,6 +369,15 @@ li div {
     .apple {
       background-color: #000;
     }
+    .fa-whatsapp:hover{
+    cursor: pointer;
+  transform: scale(1.5); 
+
+}
+.fa-linkedin:hover{
+    cursor: pointer;
+  transform: scale(1.5); 
+}
     .linkedin a{
         text-decoration: none; 
   color: #0077b5; 
@@ -426,6 +394,16 @@ li div {
   color: #333; 
   margin-bottom: 10px; 
 }
+.in-view{
+    opacity : 1!important;
+transform : translateY(0)!important;
+transition: 0.5s ease-in-out;
+}
+.from-top{
+
+  animation:fadeInDown 0.5s  ease-in-out forwards ;}
+.from-bottom{
+  animation:fadeInUp 0.5s  ease-in-out forwards ;}
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -511,6 +489,61 @@ li div {
      transform-origin: left;
   }
 }
+      /*cross devicces disgin response*/
+        @media (max-width: 768px) {
+            body {
+  margin: 0;
+  overflow-x: hidden; 
+}
+  header h1 {
+    font-size: 5vw;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    margin: 0 5px;
+  }
+
+  section {
+    padding: 5vh 5vw;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+    * {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  overflow-x: hidden; 
+}
+  header h1 {
+    font-size: 6vw;
+  }
+body{
+    width: 100%;
+}
+  nav {
+    position:relative;
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+   .interactive-list div :nth-child(1){
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+
+ }
+}
     </style>
 </head>
 <body class="parallax">
@@ -518,6 +551,17 @@ li div {
         <h1>Making <span class="tit1">Full Functional </span>Website <span class="tit2">Customizable</span> For Your <span class="tit3">Business</span></h1>
         <p>Freelance Developer: AbdElrhman Muhamed</p>
         <img src="https://media.licdn.com/dms/image/v2/D4E03AQH5l7q3Fw8C3w/profile-displayphoto-shrink_400_400/B4EZRT0LpuHsAg-/0/1736572977268?e=1743033600&v=beta&t=4yQHi0srpkQT8ji6cFsio1Mq1e9DqTY_D1BolNq5z1I" alt="Photo">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+      </script>
+      <script type="text/javascript">
+        (function () {
+          emailjs.init({
+            publicKey: "pTJXgAYxxtFObHDBu",
+          });
+        })();
+      </script>
+
     </header>
     <nav>
         <a href="#about">About</a>
@@ -539,22 +583,22 @@ li div {
             
             <ul style="text-align: left; margin: 20px auto; max-width: 800px;">
                 <div>
-                <p><a href="https://www.wix.com/website-template/view/html/3793?originUrl=https%3A%2F%2Fwww.wix.com%2Fwebsite%2Ftemplates%3Fpsafe_param%3D1%26utm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D21365768101%5E163727023856%5Esearch%2520-%2520dsa%26experiment_id%3D%5E%5E701718889616%5E%26gad_source%3D1%26gclid%3DCj0KCQiA4rK8BhD7ARIsAFe5LXK7GKAZulw0iK9ta5ZdfKVCx-3j3W_eyEnIIQCcpLkFfoxmG7rkfwAaAkUPEALw_wcB&tpClick=view_button&esi=ba0ff2ea-ff33-4cee-a419-833b86eaae7d"
+                <p><a id="st" href="https://www.wix.com/website-template/view/html/3793?originUrl=https%3A%2F%2Fwww.wix.com%2Fwebsite%2Ftemplates%3Fpsafe_param%3D1%26utm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D21365768101%5E163727023856%5Esearch%2520-%2520dsa%26experiment_id%3D%5E%5E701718889616%5E%26gad_source%3D1%26gclid%3DCj0KCQiA4rK8BhD7ARIsAFe5LXK7GKAZulw0iK9ta5ZdfKVCx-3j3W_eyEnIIQCcpLkFfoxmG7rkfwAaAkUPEALw_wcB&tpClick=view_button&esi=ba0ff2ea-ff33-4cee-a419-833b86eaae7d"
                         target="_blank">E-commerce Platforms</a></p>
-                <img src="https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/120b7a83848f3f16a10e40459d8761ef3b1c5fbc2b3fe5dddab41932912a25341733214345506.jpg/v1/fill/w_322%2Ch_182%2Cq_90%2Cusm_0.60_1.00_0.01/120b7a83848f3f16a10e40459d8761ef3b1c5fbc2b3fe5dddab41932912a25341733214345506.jpg"
-                    alt="">
+                <img style="cursor: pointer;" src="https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/120b7a83848f3f16a10e40459d8761ef3b1c5fbc2b3fe5dddab41932912a25341733214345506.jpg/v1/fill/w_322%2Ch_182%2Cq_90%2Cusm_0.60_1.00_0.01/120b7a83848f3f16a10e40459d8761ef3b1c5fbc2b3fe5dddab41932912a25341733214345506.jpg "
+                    alt="" onclick="document.getElementById('st').click()">
                     </div>
                     <div>
-                <p><a href="https://www.wix.com/website-template/view/html/1936?originUrl=https%3A%2F%2Fwww.wix.com%2Fwebsite%2Ftemplates&tpClick=view_button&esi=297761b1-ded2-41d3-b8d5-5b8bd54b172e"
+                <p><a id="nd" href="https://www.wix.com/website-template/view/html/1936?originUrl=https%3A%2F%2Fwww.wix.com%2Fwebsite%2Ftemplates&tpClick=view_button&esi=297761b1-ded2-41d3-b8d5-5b8bd54b172e"
                         target="_blank">Portfolio Websites</a></p>
-                <img src="https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/dd4d72ee00b5434bac35d45bc50b315a.jpg/v1/fill/w_322%2Ch_182%2Cq_90%2Cusm_0.60_1.00_0.01/dd4d72ee00b5434bac35d45bc50b315a.jpg"
-                    alt="">
+                <img style="cursor: pointer;" src="https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/dd4d72ee00b5434bac35d45bc50b315a.jpg/v1/fill/w_322%2Ch_182%2Cq_90%2Cusm_0.60_1.00_0.01/dd4d72ee00b5434bac35d45bc50b315a.jpg"
+                    alt="" onclick="document.getElementById('nd').click()">
                     </div>
                     <div>
-                <p><a href="https://www.wix.com/website-template/view/html/2282?originUrl=https%3A%2F%2Fwww.wix.com%2Fwebsite%2Ftemplates&tpClick=view_button&esi=ccb7afb9-c3cd-445b-a268-09c6334c3c3e"
+                <p><a id="rd" href="https://www.wix.com/website-template/view/html/2282?originUrl=https%3A%2F%2Fwww.wix.com%2Fwebsite%2Ftemplates&tpClick=view_button&esi=ccb7afb9-c3cd-445b-a268-09c6334c3c3e"
                         target="_blank">Business Management Tools</a></p>
-                <img src="https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/930c7858f25ab4b509c2c7642926e551ce31d5ab621f3d49e6251daed6cd8c511683021255495.jpg/v1/fill/w_322%2Ch_182%2Cq_90%2Cusm_0.60_1.00_0.01/930c7858f25ab4b509c2c7642926e551ce31d5ab621f3d49e6251daed6cd8c511683021255495.jpg"
-                    alt="">
+                <img style="cursor: pointer;" src="https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/930c7858f25ab4b509c2c7642926e551ce31d5ab621f3d49e6251daed6cd8c511683021255495.jpg/v1/fill/w_322%2Ch_182%2Cq_90%2Cusm_0.60_1.00_0.01/930c7858f25ab4b509c2c7642926e551ce31d5ab621f3d49e6251daed6cd8c511683021255495.jpg"
+                    alt="" onclick="document.getElementById('rd').click()">
                     </div>
             </ul>
         </div>
@@ -615,15 +659,15 @@ li div {
           <h3>Contact Us</h3>
             <p>Phone No: 01271175532 <i  style="color: green; font-size: 1.5rem;" class="fab fa-whatsapp contact"></i></p>
             <p class="email">Email: <a href="mailto:talktoboda01@gmail.com">abdulrhman@Develope</a></p>
-            <p class="linkedin"> <a href="https://www.linkedin.com/in/apdo978" target="_blank">LinkedIn Profile</a> <i style="color: #005bb5;" class="fab fa-linkedin"></i></p>
+            <p class="linkedin"> <a href="https://www.linkedin.com/in/apdo978" target="_blank">LinkedIn Profile</a> <a href="https://www.linkedin.com/in/apdo978" target="_blank"><i style="color: #005bb5;" class="fab fa-linkedin"></i></a></p>
         </div>
         <div class="contact-section">
           <div class="contact-details">
           </div>
         
           <div class="form-section">
-            <!-- <h3>Send Me a message</h3>
-            <form>
+            <h3>Send Me a message</h3>
+            <form id="contact-form" method="">
               <label for="first-name">First name </label>
               <input type="text" id="first-name" placeholder="First name" required>
         
@@ -639,7 +683,7 @@ li div {
               <button type="submit">Submit</button>
             </form>
         
-          </div> -->
+          </div>
             <div class="appointment-link">
               <a href="https://wa.me/0201271175532">Book an Appointment Online &rarr;</a>
             </div>
@@ -649,8 +693,9 @@ li div {
     <footer>
         <p>&copy;<span></span> AbdElrhman Muhamed All Rights Reserved.</p>
     </footer>
-    <button id="scrollToTop" title="Go to top">&#8679;</button>
+    <button id="scrollToTop" title="Go to top"><i style="font-size: 2rem;" class="fas fa-arrow-up"></i></button>
     <script>
+      //moving background
         // window.addEventListener('scroll', function () {
         //         let scrolled = window.pageYOffset;
         //         document.querySelector('.parallax').style.backgroundPosition = 'center ' + (scrolled * 0.33) + 'px';
@@ -658,6 +703,7 @@ li div {
             //  document.querySelector(".btn cta").addEventListener("click", function () {
                    
             //     });
+
         // Smooth scrolling for nav links
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', (e) => {
@@ -676,39 +722,78 @@ li div {
                 
             });
         });
+        //send email funcc
+        const form = document.querySelector('#contact-form')
+        const firstName = document.getElementById('last-name')
+        const lastName = document.getElementById('first-name')
+        const email = document.getElementById('email')
+        const messageName = document.getElementById('message')
+        const serviceID = 'service_67kb1dc'
+        const TemplateID = 'template_y85lxo7'
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const formData = {firstName: firstName.value, lastName: lastName.value, email: email.value, messageName: messageName .value}
+          Swal.fire({
+            title: 'Sending...',
+            text: 'Please wait while your email is being sent.',
+            icon: 'info',
+            allowOutsideClick: false, 
+            didOpen: () => {
+              Swal.showLoading(); 
+            }
+          });
+          emailjs.send(serviceID, TemplateID, formData).then((res)=>{
+
+            Swal.fire({
+              title: 'Success!',
+              text: 'Your Email sent successfully.',
+              icon: 'success',
+              confirmButtonText: 'OK'
+            });
+            firstName.value = '';
+            lastName.value = '';
+            email.value = '';
+            messageName.value = '';
+          }).catch(err=>{
+            Swal.fire({
+              title: 'Error!',
+              text: `Failed to send email: ${err}`,
+              icon: 'error',
+              confirmButtonText: 'OK'
+            });
+          })
+          
+          })
+
 
         // Add fade-in effect on scroll
         const sections = document.querySelectorAll('section');
         const sections1 = document.querySelectorAll('.interactive-list li');
         const sections2 = document.querySelectorAll('section div');
         const options = {
-            threshold: 0.1
+            threshold: 0.0800
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateY(0)';
+                   if (entry.boundingClientRect.top < window.innerHeight / 2) {
+                    entry.target.classList.add('from-top'); 
+                  } 
+                  else {
+                    entry.target.classList.add('from-bottom');
+                  }
+                }
+                else {
+             entry.target.classList.remove('in-view', 'from-top', 'from-bottom');
                 }
             });
         }, options);
-
-        sections.forEach(section => {
+        [...sections,...sections1,...sections2].forEach(section => {
             section.style.opacity = 0;
             section.style.transform = 'translateY(50px)';
             observer.observe(section);
-        });
-        sections1.forEach(section => {
-            section.style.opacity = 0;
-            section.style.transform = 'translateY(50px)';
-            observer.observe(section);
-        });
-        sections2.forEach(section => {
-            section.style.opacity = 0;
-            section.style.transform = 'translateY(50px)';
-            observer.observe(section);
-        });
+          });
 
         // Scroll to top button functionality
         const scrollToTopButton = document.getElementById('scrollToTop');
@@ -728,16 +813,7 @@ li div {
                 link.style.color = "white";
             })
         });
-            document.querySelectorAll('img').forEach(img => {
-                    img.addEventListener('mouseenter', () => {
-                        img.style.transform = 'scale(1.05)';
-                        img.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
-                    });
-                    img.addEventListener('mouseleave', () => {
-                        img.style.transform = 'scale(1)';
-                        img.style.boxShadow = 'none';
-                    });
-                });
+            
                 document.querySelectorAll('section li').forEach(list=>{list.addEventListener('click', () =>{
                     list.classList.toggle('active');
                      if (list.classList.contains('active')) {
@@ -773,5 +849,6 @@ li div {
             console.log(con);
             
     </script>
+    <script src="./main.js"></script>
 </body>
 </html>
