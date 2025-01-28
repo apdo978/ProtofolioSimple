@@ -7,623 +7,106 @@
         content="Freelance Developer AbdElrhman Muhamed portfolio, showcasing projects, services, and contact info.">
     <meta name="keywords" content="freelance developer,عبغفار,صفحة عبغفار, web developer, AbdElrhman Muhamed,portfolio projects,web services, contact">
     <meta name="author" content="AbdElrhman Muhamed">
+
+    <!-- title -->
     <title>AbdElrhman Muhamed...😎</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            transition: all 0.3s ease;
-            text-transform: capitalize;
-          
-        }
-        body {
 
-      /* background-image: url('https://files.oaiusercontent.com/file-Hn3KqHrQL9xHn4SWkG8MHx?se=2025-01-26T18%3A13%3A47Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D86c8f3f4-c008-4050-9ffb-8c18021a509d.webp&sig=HjCCXiOUiriZ4YDJbdL5u2ZgkNzSD2tYjsOx/ne%2BmY0%3D');
-    background-attachment:fixed;
-    background-repeat:no-repeat;
-    background-size:cover; */
-   
-
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.8;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            overflow-x: hidden;
-        }
-        h1 span {
-  display: inline-block;
-font-size: 2rem;
-}
-.tit1{
-  animation:  bounce 1.5s ease-in-out forwards, tilt 1s 1.5s forwards;
-
-}
-.tit2{
-    animation:  bounce2 1.5s ease-in-out forwards, tilt2 1s 1.5s forwards;
-}
-.tit3{
-    animation:  tilt3 2.5s 1.5s  ease-in-out forwards;
-}
-        /*images */
-        /* img {
-          
-          
-        } */
-        img:hover {
-          transform: scale(1.1);
-          box-shadow:  4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-/*full functional first header*/
-        header {
-            background: linear-gradient(45deg, #0078d7, #005bb5);
-            color: #fff;
-            padding: 5vh 10px;
-            text-align: center;
-            animation:  fadeInDown 1s ease;
-        }
-        /*big words ionside the header*/
-        header h1 {
-            font-size: 4vw;
-            margin-bottom: 10px;
-            animation: fadeIn 1.5s ease;
-
-        }
-        /*s,all words inside the header*/
-        /*tmp email , mohmal   for emails*/
-        header p {
-            font-size: 1.2rem;
-        }
-        header img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            margin-top: 20px;
-            animation: fadeIn 2s ease;
-        }
-        /*navbar*/
-        nav {
-            background-color: #333;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            padding: 10px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            animation: slideInDown 1s ease;
-        }
-        /*anchors inside the links*/
-        nav a {
-            text-align: center;
-            color: #fff;
-            text-decoration: none;
-            padding: 5px;
-            margin: 0 10px;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-            border: 2px solid #006ecb;
-            border-radius: 5px;
-            transition: 0.5s;
-        }
-        nav a:hover {
-            color: #0078d7;
-            transform: scale(1.2);
-        }
-        /*all sections include about servcies and contact*/
-        section {
-            padding: 5vh 10vw;
-            max-width: 100%;
-            margin: 0 auto;
-            text-align: center;
-        }
-        /*about servcies contact words*/
-        section h2 {
-            text-transform: capitalize;
-            font-size:2em;
-            color: #0078d7;
-            margin-bottom: 15px;
-            animation:  fadeInUp 1s ease;
-        }
-        /*youtube videos*/
-        iframe {
-    border: none;
-             border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    
-        }
-         iframe:hover {
-    transform: scale(1.1);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-  }
-  /*words inside sections descreptions*/
-        section p {
-            text-transform: capitalize;
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-
-        }
-  /*allrights reserved*/
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
-        .contact-info {
-            margin-top: 20px;
-        }
-        .contact-info p {
-            margin: 10px 0;
-            
-        }
-       /*contact*/
-        .form-section label {
-      margin: 10px 0 5px;
-      font-size: 0.9rem; .contact-section {
-      display: flex;
-      justify-content: space-between;
-      padding: 40px;
-      max-width: 30%;
-      margin: 0 auto;
-    }
-
-    .contact-details {
-      flex: 1;
-    }
-
-    .contact-details h3 {
-      margin-top: 0;
-      font-size: 1.5rem;
-    }
-
-    .contact-details p {
-      margin: 5px 0;
-      font-size: 1rem;
-    }
-
-    .form-section {
-      flex: 1;
-      margin-left: 20px;
-    }
-
-    .form-section form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    }
-/*when form activated*/
-    .form-section input,
-    .form-section textarea {
-      padding: 10px;
-      margin-bottom: 15px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      width: 100%;
-    }
-
-    .form-section textarea {
-      resize: none;
-      height: 100px;
-    }
-
-    .form-section button {
-      background-color: #005bb5;
-      color: #fff;
-      border: none;
-      padding: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    .form-section button:hover {
-      background-color: #333;
-    }
-
-    .appointment-link {
-      text-align: right;
-      margin-top: 20px;
-    }
-
-    .appointment-link a {
-      color: #333;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-
-    .appointment-link a:hover {
-      color: #005bb5;
-    }
-        .btn {
-            display: inline-block;
-            background-color: #0078d7;
-            color: #fff;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            margin: 10px;
-            font-size: 1.1rem;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #005bb5;
-            transform: scale(1.1);
-        } 
-        /*scroll to top button*/
-        #scrollToTop {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            padding: 1.5rem 2rem;
-            border-radius: 50%;
-            cursor: pointer;
-            display: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        #scrollToTop:hover {
-            background-color: #005bb5;
-            transform: scale(1.1);
-        }
-        .interactive-list {
-  list-style: none; 
-  padding: 0;
-}
-
- .interactive-list div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 2%;
- }
- .interactive-list div :nth-child(1){
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
- }
- .interactive-list div :nth-child(1) div{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
- }
-.interactive-list div a{
-    text-decoration: none;
-}
-/* .interactive-list div img:hover{
-     cursor: pointer; 
-
-} */
-/*interactive list*/
-.interactive-list li {
-    cursor: pointer;
-  margin: 10px 0; 
-  padding: 15px; 
-  background: linear-gradient(90deg, #333, #2575fc);
-  color: white;
-  font-size: 1.2rem;
-  border-radius: 8px; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition:  transform 0.3s, background 0.3s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-}
-/*each list*/
-.interactive-list li:hover {
-  transform: scale(1.1)!important;
-  background: linear-gradient(90deg, #2575fc, #333);
-}
-/*words inside lists*/
-.interactive-list li span {
-  margin-right: 10px; 
-  font-size: 1.5rem;
-}
-
-li div {
-    background-color: #000;
-}
-  .login-buttons {
-      display: flex;
-      
-      gap: 15px;
-    }
-    .login-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 20px;
-      font-size: 16px;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .login-button i {
-      margin-right: 10px;
-      font-size: 18px;
-    }
-    .login-button:hover {
-      transform: scale(1.05);
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    .google {
-      background-color: #db4437;
-    }
-    .facebook {
-      background-color: #1877f2;
-    }
-    .apple {
-      background-color: #000;
-    }
-    .fa-whatsapp:hover{
-    cursor: pointer;
-  transform: scale(1.5); 
-
-}
-.fa-linkedin:hover{
-    cursor: pointer;
-  transform: scale(1.5); 
-}
-    .linkedin a{
-        text-decoration: none; 
-  color: #0077b5; 
-  font-weight: bold; 
-  transition: color 0.3s ease, transform 0.3s ease; 
-    }
-    .linkedin:hover a{
-  color: #005582;
-  transform: scale(1.05);
-}
-.email {
-    font-family: Arial, sans-serif; 
-  font-size: 16px; 
-  color: #333; 
-  margin-bottom: 10px; 
-}
-.in-view{
-    opacity : 1!important;
-transform : translateY(0)!important;
-transition: 0.5s ease-in-out;
-}
-.from-top{
-
-  animation:fadeInDown 0.5s  ease-in-out forwards ;}
-.from-bottom{
-  animation:fadeInUp 0.5s  ease-in-out forwards ;}
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes slideInDown {
-            from { transform: translateY(-100%); }
-            to { transform: translateY(0); }
-        }
-
-        @keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
- 
-  50% {
-    transform: translateY(-70px);
-  }
-  70% {
-    transform: translateY(40px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-        @keyframes bounce2 {
-  0% {
-    transform: translateX(0);
-  }
- 
-  50% {
-    transform: translateX(-70px);
-    transform: scale(1.5);
-    
-  }
-  70% {
-    transform: translateX(40px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-/* Animation for tilting */
-@keyframes tilt {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(-10deg);
-  }
-}
-@keyframes tilt2 {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(20deg);
-  }
-}
-@keyframes tilt3 {
-  0% {
-    transform: rotate(0);
-    transform-origin: left;
-  }
-  50%{
-     transform: rotate(20deg);
-     transform-origin: left;
-
-  }
-  70%{ transform: rotate(40deg);
-     transform-origin: left;}
-  100% {
-    transform: rotate(10deg);
-     transform-origin: left;
-  }
-}
-      /*cross devicces disgin response*/
-        @media (max-width: 768px) {
-            body {
-  margin: 0;
-  overflow-x: hidden; 
-}
-  header h1 {
-    font-size: 5vw;
-  }
-
-  nav a {
-    font-size: 0.9rem;
-    margin: 0 5px;
-  }
-
-  section {
-    padding: 5vh 5vw;
-  }
-
-  .btn {
-    padding: 10px 20px;
-  }
-}
-
-@media (max-width: 480px) {
-    * {
-  box-sizing: border-box;
-}
-
-
-body {
-  margin: 0;
-  overflow-x: hidden; 
-}
-  header h1 {
-    font-size: 6vw;
-  }
-body{
-    width: 100%;
-}
-  nav {
-    position:relative;
-    flex-direction: column;
-  }
-
-  nav a {
-    margin: 5px 0;
-  }
-   .interactive-list div :nth-child(1){
-    display: flex;
-    flex-direction: column !important;
-    justify-content: center;
-
- }
-}
-    </style>
 </head>
+
+
 <body class="parallax">
+
     <header>
         <h1>Making <span class="tit1">Full Functional </span>Website <span class="tit2">Customizable</span> For Your <span class="tit3">Business</span></h1>
         <p>Freelance Developer: AbdElrhman Muhamed</p>
         <img src="https://media.licdn.com/dms/image/v2/D4E03AQH5l7q3Fw8C3w/profile-displayphoto-shrink_400_400/B4EZRT0LpuHsAg-/0/1736572977268?e=1743033600&v=beta&t=4yQHi0srpkQT8ji6cFsio1Mq1e9DqTY_D1BolNq5z1I" alt="Photo">
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-      </script>
-      <script type="text/javascript">
-        (function () {
-          emailjs.init({
-            publicKey: "pTJXgAYxxtFObHDBu",
-          });
-        })();
-      </script>
-
     </header>
+
     <nav>
         <a href="#about">About</a>
         <a href="#services">My Services</a>
         <!-- <a href="#projects">Projects</a> -->
         <a href="#contact">Contact Info</a>
     </nav>
+
     <section id="about">
         <h2>About Me</h2>
         <p>Full-Stack Web Developer passionate about creative development and eager to learn. I like to take on challenges, share with others, and see the end result of a project that satisfies both the client and myself.</p>
         <a class="btn cta" style="cursor:pointer"  onclick=" document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });">start your first project now...🚀</a>
     </section>
+
+
     <section id="services">
         <h2>My Services</h2>
         <p>Professional services tailored to meet your business needs, including:</p>
+
         <ul class="interactive-list" style="text-align: left; margin: 20px auto; max-width: 800px;">
         <li><span>✅</span> Custom Website Development To Your Business &nbsp; <i class="fas fa-chevron-down"></i></li>
         <div >
             
-            <ul style="text-align: left; margin: 20px auto; max-width: 800px;">
+            <ul style="text-align: left; margin: 20px auto; ;">
                 <div>
                 <p><a id="st" href="https://www.wix.com/website-template/view/html/3793?originUrl=https%3A%2F%2Fwww.wix.com%2Fwebsite%2Ftemplates%3Fpsafe_param%3D1%26utm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D21365768101%5E163727023856%5Esearch%2520-%2520dsa%26experiment_id%3D%5E%5E701718889616%5E%26gad_source%3D1%26gclid%3DCj0KCQiA4rK8BhD7ARIsAFe5LXK7GKAZulw0iK9ta5ZdfKVCx-3j3W_eyEnIIQCcpLkFfoxmG7rkfwAaAkUPEALw_wcB&tpClick=view_button&esi=ba0ff2ea-ff33-4cee-a419-833b86eaae7d"
                         target="_blank">E-commerce Platforms</a></p>
                 <img style="cursor: pointer;" src="https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/120b7a83848f3f16a10e40459d8761ef3b1c5fbc2b3fe5dddab41932912a25341733214345506.jpg/v1/fill/w_322%2Ch_182%2Cq_90%2Cusm_0.60_1.00_0.01/120b7a83848f3f16a10e40459d8761ef3b1c5fbc2b3fe5dddab41932912a25341733214345506.jpg "
                     alt="" onclick="document.getElementById('st').click()">
                     </div>
+
                     <div>
                 <p><a id="nd" href="https://www.wix.com/website-template/view/html/1936?originUrl=https%3A%2F%2Fwww.wix.com%2Fwebsite%2Ftemplates&tpClick=view_button&esi=297761b1-ded2-41d3-b8d5-5b8bd54b172e"
                         target="_blank">Portfolio Websites</a></p>
                 <img style="cursor: pointer;" src="https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/dd4d72ee00b5434bac35d45bc50b315a.jpg/v1/fill/w_322%2Ch_182%2Cq_90%2Cusm_0.60_1.00_0.01/dd4d72ee00b5434bac35d45bc50b315a.jpg"
                     alt="" onclick="document.getElementById('nd').click()">
                     </div>
+
                     <div>
                 <p><a id="rd" href="https://www.wix.com/website-template/view/html/2282?originUrl=https%3A%2F%2Fwww.wix.com%2Fwebsite%2Ftemplates&tpClick=view_button&esi=ccb7afb9-c3cd-445b-a268-09c6334c3c3e"
                         target="_blank">Business Management Tools</a></p>
                 <img style="cursor: pointer;" src="https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/930c7858f25ab4b509c2c7642926e551ce31d5ab621f3d49e6251daed6cd8c511683021255495.jpg/v1/fill/w_322%2Ch_182%2Cq_90%2Cusm_0.60_1.00_0.01/930c7858f25ab4b509c2c7642926e551ce31d5ab621f3d49e6251daed6cd8c511683021255495.jpg"
                     alt="" onclick="document.getElementById('rd').click()">
                     </div>
+
             </ul>
+
+
         </div>
+
         <li><span>💻</span> Software Solutions To Your Business Website &nbsp; <i class="fas fa-chevron-down"></i></li>
-        <div class="iframe-container"><iframe width="30%" height="30%" src="https://www.youtube.com/embed/vmsrEAVXP3A?si=XCQLeIwwKhV3sl0z"
+        <div  class="iframe-container">
+            <iframe  width="30%" height="30%" src="https://www.youtube.com/embed/vmsrEAVXP3A?si=XCQLeIwwKhV3sl0z"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-        <li><span>📱</span> Responsive Designs and Easy To Use </li>
-        <div></div>
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+        </div>
 
-        <li><span>🔗</span> Integration With All Services Including But Not Limited to:</li>
-        <div></div>
+
+        <li><span>📱</span> Responsive Designs and Easy To Use </li>
+        <span></span>
+
+        <li><span>🔗</span> Integration With All Services Including But Not Limited to:&nbsp;<i class="fas fa-chevron-down"></i></li>
+        
+
+
             <ol>
                 <li><i class="fab fa-google" ></i> &nbsp; Google (Maps-Analytics-Authentication)</li>
-                <div></div>
+                <span></span>
                 <li><i class="fab fa-youtube" style="color: rgb(255, 68, 68);"></i> &nbsp; youtube (videos From Your Channel) &nbsp; <i class="fas fa-chevron-down"></i></li>
                 <div class="iframe-container" >
                 
                     <iframe  width="30%" height="30%" src="https://www.youtube.com/embed/Z6nod8NR5A8?si=Uz3WsI_m_J3zQCZD"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
+                        allowfullscreen></iframe>
+                </div>
+
+
                 <li > <i class="fab fa-facebook"></i> &nbsp; Facebook (Authentication) &nbsp; <i class="fas fa-chevron-down"></i></li>
+
                 <div  class="login-buttons">
                     
                     <button class="login-button google">
@@ -637,26 +120,33 @@ body{
                     </button>
                 
                 </div>
+                
                 <li>SEO Optimization</li>
-        <div></div>
+                 <span></span>
 
             </ol>    
             </li>
-        <div></div>
+        <span></span>
 
         </ul>
     </section>
+
+
+
+
     <!-- <section id="projects">
         <h2>Projects</h2>
        
     </section> -->
+
+
     <section id="contact" class="Contact Info">
         <h2>Contact Info</h2>
                       <h3>Address</h3>
                       <p>Egypt Cairo Giza</p>
         <!-- <form action=""></form> -->
         <div class="contact-info">
-          <h3>Contact Us</h3>
+          <h3>Contact Me</h3>
             <p>Phone No: 01271175532 <i  style="color: green; font-size: 1.5rem;" class="fab fa-whatsapp contact"></i></p>
             <p class="email">Email: <a href="mailto:talktoboda01@gmail.com">abdulrhman@Develope</a></p>
             <p class="linkedin"> <a href="https://www.linkedin.com/in/apdo978" target="_blank">LinkedIn Profile</a> <a href="https://www.linkedin.com/in/apdo978" target="_blank"><i style="color: #005bb5;" class="fab fa-linkedin"></i></a></p>
@@ -673,6 +163,11 @@ body{
         
               <label for="last-name">Last name </label>
               <input type="text" id="last-name" placeholder="Last name" required>
+
+              <label for="phone-number">Phone Number</label>
+<input type="tel" id="phone-number" placeholder="Phone Number"  required>
+ <div id="error-message" class="error">Invalid phone number. Please enter a valid  number starting with 01 followed by 9 digits or more.</div>
+
         
               <label for="email">Email </label>
               <input type="email" id="email" placeholder="Email" required>
@@ -694,161 +189,9 @@ body{
         <p>&copy;<span></span> AbdElrhman Muhamed All Rights Reserved.</p>
     </footer>
     <button id="scrollToTop" title="Go to top"><i style="font-size: 2rem;" class="fas fa-arrow-up"></i></button>
-    <script>
-      //moving background
-        // window.addEventListener('scroll', function () {
-        //         let scrolled = window.pageYOffset;
-        //         document.querySelector('.parallax').style.backgroundPosition = 'center ' + (scrolled * 0.33) + 'px';
-        //     });
-            //  document.querySelector(".btn cta").addEventListener("click", function () {
-                   
-            //     });
 
-        // Smooth scrolling for nav links
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-           
-                document.querySelector(link.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-               document.querySelectorAll('nav a').forEach((link)=>{
-                link.style.backgroundColor = "transparent"
-                link.style.color = "white";
-            })
-                  link.style.backgroundColor = "white"
-                link.style.color = "black";
-
-                
-            });
-        });
-        //send email funcc
-        const form = document.querySelector('#contact-form')
-        const firstName = document.getElementById('last-name')
-        const lastName = document.getElementById('first-name')
-        const email = document.getElementById('email')
-        const messageName = document.getElementById('message')
-        const serviceID = 'service_67kb1dc'
-        const TemplateID = 'template_y85lxo7'
-        form.addEventListener('submit', (e) => {
-          e.preventDefault();
-          const formData = {firstName: firstName.value, lastName: lastName.value, email: email.value, messageName: messageName .value}
-          Swal.fire({
-            title: 'Sending...',
-            text: 'Please wait while your email is being sent.',
-            icon: 'info',
-            allowOutsideClick: false, 
-            didOpen: () => {
-              Swal.showLoading(); 
-            }
-          });
-          emailjs.send(serviceID, TemplateID, formData).then((res)=>{
-
-            Swal.fire({
-              title: 'Success!',
-              text: 'Your Email sent successfully.',
-              icon: 'success',
-              confirmButtonText: 'OK'
-            });
-            firstName.value = '';
-            lastName.value = '';
-            email.value = '';
-            messageName.value = '';
-          }).catch(err=>{
-            Swal.fire({
-              title: 'Error!',
-              text: `Failed to send email: ${err}`,
-              icon: 'error',
-              confirmButtonText: 'OK'
-            });
-          })
-          
-          })
-
-
-        // Add fade-in effect on scroll
-        const sections = document.querySelectorAll('section');
-        const sections1 = document.querySelectorAll('.interactive-list li');
-        const sections2 = document.querySelectorAll('section div');
-        const options = {
-            threshold: 0.0800
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                   if (entry.boundingClientRect.top < window.innerHeight / 2) {
-                    entry.target.classList.add('from-top'); 
-                  } 
-                  else {
-                    entry.target.classList.add('from-bottom');
-                  }
-                }
-                else {
-             entry.target.classList.remove('in-view', 'from-top', 'from-bottom');
-                }
-            });
-        }, options);
-        [...sections,...sections1,...sections2].forEach(section => {
-            section.style.opacity = 0;
-            section.style.transform = 'translateY(50px)';
-            observer.observe(section);
-          });
-
-        // Scroll to top button functionality
-        const scrollToTopButton = document.getElementById('scrollToTop');
-
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > window.innerHeight / 2) {
-                scrollToTopButton.style.display = 'block';
-            } else {
-                scrollToTopButton.style.display = 'none';
-            }
-        });
-
-        scrollToTopButton.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-                  document.querySelectorAll('nav a').forEach((link) => {
-                link.style.backgroundColor = "transparent"
-                link.style.color = "white";
-            })
-        });
-            
-                document.querySelectorAll('section li').forEach(list=>{list.addEventListener('click', () =>{
-                    list.classList.toggle('active');
-                     if (list.classList.contains('active')) {
-                         
-                         
-                         list.nextElementSibling.style.display = 'none'
-                        } else {
-                        list.nextElementSibling.style.display=''
-
-                    
-                    
-                    }
-                })})
-                document.querySelector('.fa-whatsapp').addEventListener('click', () => {window.location.assign('https://wa.me/0201271175532')
-                })
-                document.querySelector('footer p span').textContent = " "+new Date().getFullYear().toString();
-                const con = `      
-                                   .#@@@@@%
-                                 .*@@@@@@@=
-                                *@@@@@@@=.
-                              =@@@@@@@+  
-                            =@@@@@@@*.    
-                          :@@@@@@@%.       
-    %@@@@@%:           .%@@@@@@%.           
-    :@@@@@@@#.       .#@@@@@@@:            
-      =@@@@@@@*     *@@@@@@@=            
-        +@@@@@@@  +@@@@@@@+          
-          *@@@@:=@@@@@@@*            
-           .#@=@@@@@@@#.            
-             :%@@@@@%:             
-               :*%*:                
-`
-            console.log(con);
-            
-    </script>
-    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script  src="./main.js"  ></script>
 </body>
 </html>
