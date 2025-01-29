@@ -155,10 +155,122 @@ document.querySelectorAll('section li').forEach(list => {
         }
     })
 })
+// ai sstyling part 
+const chatContainer = document.getElementById('chatContainer');
+const chatForm = document.getElementById('chatForm');
+const messageInput = document.getElementById('messageInput');
+const sendButton = document.getElementById('sendButton');
+let botMessage;
+messageInput.addEventListener('input', () => {
+    sendButton.disabled = !messageInput.value.trim();
+});
+function addMessage(content, isUser = false) {
+    const wrapper = document.createElement('div');
+    wrapper.className = `message-wrapper${isUser ? ' user' : ''}`;
+
+    const message = document.createElement('div');
+    message.className = `message${isUser ? ' user' : ' assistant'}`;
+    message.textContent = content;
+
+    wrapper.appendChild(message);
+    chatContainer.appendChild(wrapper);
+   
+}
+  
+//ai functionalty
+chatForm.addEventListener('submit', async(e) => {
+    e.preventDefault();
+    const message = messageInput.value.trim();
+    if (!message) return;
+
+    // Add user message
+    addMessage(message, true);
+    messageInput.value = '';
+    sendButton.disabled = true;
+    
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer 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', // ضع هنا API Key الخاص بك
+        },
+        body: JSON.stringify({
+            model: "gpt-4o-mini",
+
+
+            messages: [{ role: "user", content: message }]
+
+        }),
+    }).catch((err)=>{console.log(err)})
+
+    const data = await response.json();
+    botMessage = data.choices[0].message.content;
+    console.log(botMessage)
+
+    addMessage(botMessage)
+    // Simulate assistant response demo
+    // setTimeout(() => {
+    //     addMessage('This is a simulated response. In a real implementation, this would be replaced with an actual API call to a language model.');
+    // }, 1000);
+
+});
+// full screen Part
+document.getElementById('fullscreen-button').addEventListener('click', function () {
+  
+    document.querySelector('.body').requestFullscreen(); 
+});
+// ai part 
+
+// const sendButton = document.getElementById('send-btn');
+// const userInput = document.getElementById('user-input');
+// const messagesContainer = document.getElementById('messages');
+
+// sendButton.addEventListener('click', async () => {
+//     const userMessage = userInput.value;
+//     if (userMessage.trim()) {
+
+//         const userMessageElement = document.createElement('div');
+//         userMessageElement.textContent = 'You:' + userMessage;
+//         messagesContainer.appendChild(userMessageElement);
+
+//         // إرسال الرسالة إلى OpenAI API
+//         const response = await fetch('https://api.openai.com/v1/chat/completions', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//                 'Authorization': 'Bearer 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', // ضع هنا API Key الخاص بك
+//             },
+//             body: JSON.stringify({
+//                 model: "gpt-4o-mini", // أو اختر النموذج الذي تريد استخدامه
+               
+              
+//                 messages: [{ role: "user", content: userMessage }]
+
+//             }),
+//         });
+//         // prompt: userMessage
+
+//         const data = await response.json();
+        
+//         const botMessage = data.choices[0].message.content;
+
+//         // إضافة رد GPT إلى واجهة المستخدم
+//         const botMessageElement = document.createElement('div');
+//         botMessageElement.textContent = 'شات جي بي تي: ' + botMessage;
+//         messagesContainer.appendChild(botMessageElement);
+
+//         messagesContainer.scrollTop = messagesContainer.scrollHeight;
+//         // مسح المدخلات
+//         userInput.value = '';
+//     }
+// });
+//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
+
 document.querySelector('.fa-whatsapp').addEventListener('click', () => {
     window.location.assign('https://wa.me/0201271175532')
 })
 document.querySelector('footer p span').textContent = " " + new Date().getFullYear().toString();
+
 const con = `      
                                    .#@@@@@%
                                  .*@@@@@@@=
