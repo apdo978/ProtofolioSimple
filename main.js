@@ -156,69 +156,79 @@ document.querySelectorAll('section li').forEach(list => {
     })
 })
 // ai sstyling part 
-const chatContainer = document.getElementById('chatContainer');
-const chatForm = document.getElementById('chatForm');
-const messageInput = document.getElementById('messageInput');
-const sendButton = document.getElementById('sendButton');
-let botMessage;
-messageInput.addEventListener('input', () => {
-    sendButton.disabled = !messageInput.value.trim();
-});
+const chatBody = document.getElementById('chatBody');
+const chatInput = document.getElementById('chatInput');
+const sendBtn = document.getElementById('sendBtn');
+
 function addMessage(content, isUser = false) {
-    const wrapper = document.createElement('div');
-    wrapper.className = `message-wrapper${isUser ? ' user' : ''}`;
-
-    const message = document.createElement('div');
-    message.className = `message${isUser ? ' user' : ' assistant'}`;
-    message.textContent = content;
-
-    wrapper.appendChild(message);
-    chatContainer.appendChild(wrapper);
-   
+    const messageDiv = document.createElement('div');
+    messageDiv.classList.add('chat-message', isUser ? 'user-message' : 'bot-message');
+    messageDiv.textContent = content;
+    chatBody.append(messageDiv);
+    chatBody.scrollTop = chatBody.scrollHeight;
 }
-  
-//ai functionalty
-chatForm.addEventListener('submit', async(e) => {
+function showLoadingIndicator() {
+    const loadingDiv = document.createElement('div');
+    loadingDiv.classList.add('loading');
+    loadingDiv.innerHTML = '<span></span><span></span><span></span>';
+    chatBody.appendChild(loadingDiv);
+    chatBody.scrollTop = chatBody.scrollHeight;
+    return loadingDiv;
+}
+sendBtn.addEventListener('click', async (e) => {
     e.preventDefault();
-    const message = messageInput.value.trim();
+    const message = chatInput.value.trim();
     if (!message) return;
 
-    // Add user message
     addMessage(message, true);
-    messageInput.value = '';
-    sendButton.disabled = true;
+    chatInput.value = '';
+    sendBtn.disabled = true;
+
+    const loadingIndicator = showLoadingIndicator();
+    try {
+        const response = await fetch('https://api.openai.com/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer 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'
+            },
+            body: JSON.stringify({
+                model: "gpt-4o-mini",
+                messages: [{ role: "user", content: message }]
+            })
+        });
+
+        const data = await response.json();
+        chatBody.removeChild(loadingIndicator);
+        if (!data.choices) {
+            addMessage('Oops! Something went wrong.');
+        } else {
+            addMessage(data.choices[0].message.content);
+        }
+    } catch (error) {
+        chatBody.removeChild(loadingIndicator); 
+        addMessage('Error connecting to the server.');
+    }
+
+    sendBtn.disabled = false;
+});
+document.getElementById('fullscreen-button').addEventListener('click', function () {
+
+    document.querySelector('.body').requestFullscreen();
+});
+
     
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer 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', // ضع هنا API Key الخاص بك
-        },
-        body: JSON.stringify({
-            model: "gpt-4o-mini",
-
-
-            messages: [{ role: "user", content: message }]
-
-        }),
-    }).catch((err)=>{console.log(err)})
-
-    const data = await response.json();
-    botMessage = data.choices[0].message.content;
-    console.log(botMessage)
-
-    addMessage(botMessage)
     // Simulate assistant response demo
     // setTimeout(() => {
     //     addMessage('This is a simulated response. In a real implementation, this would be replaced with an actual API call to a language model.');
     // }, 1000);
 
-});
+
 // full screen Part
-document.getElementById('fullscreen-button').addEventListener('click', function () {
+// document.getElementById('fullscreen-button').addEventListener('click', function () {
   
-    document.querySelector('.body').requestFullscreen(); 
-});
+//     document.querySelector('.body').requestFullscreen(); 
+// });
 // ai part 
 
 // const sendButton = document.getElementById('send-btn');
@@ -264,7 +274,7 @@ document.getElementById('fullscreen-button').addEventListener('click', function 
 //         userInput.value = '';
 //     }
 // });
-//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
+// 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
 
 document.querySelector('.fa-whatsapp').addEventListener('click', () => {
     window.location.assign('https://wa.me/0201271175532')
