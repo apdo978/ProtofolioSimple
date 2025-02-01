@@ -190,7 +190,7 @@ sendBtn.addEventListener('click', async (e) => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer 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'
+                'Authorization': window.API_KEY
             },
             body: JSON.stringify({
                 model: "gpt-4o-mini",
